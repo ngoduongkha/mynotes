@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "714365647456",
+    "project_id": "uit-mynotes",
+    "storage_bucket": "uit-mynotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714365647456:android:fdfc61645164272101a105",
+        "android_client_info": {
+          "package_name": "uit.se.mynotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714365647456-m1bt17t0q7606ad84m8du11ofuvj8idr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx2NZHwXNydynA46hq1v2aAEbnSYKd-Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714365647456-m1bt17t0q7606ad84m8du11ofuvj8idr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
