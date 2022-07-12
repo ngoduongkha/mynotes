@@ -27,8 +27,9 @@ class FirebaseAuthProvider implements AuthProvider {
         throw InvalidEmailAuthException();
       } else if (e.code == 'weak-password') {
         throw WeakPasswordAuthException();
+      } else {
+        throw GenericAuthException();
       }
-      throw GenericAuthException();
     } catch (_) {
       throw GenericAuthException();
     }
@@ -48,8 +49,9 @@ class FirebaseAuthProvider implements AuthProvider {
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       await FirebaseAuth.instance.signOut();
+    } else {
+      throw UserNotLoggedInAuthException();
     }
-    throw UserNotLoggedInAuthException();
   }
 
   @override
@@ -63,8 +65,9 @@ class FirebaseAuthProvider implements AuthProvider {
       final user = currentUser;
       if (user != null) {
         return user;
+      } else {
+        throw UserNotLoggedInAuthException();
       }
-      throw UserNotLoggedInAuthException();
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-email') {
         throw InvalidEmailAuthException();
@@ -84,8 +87,9 @@ class FirebaseAuthProvider implements AuthProvider {
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       await user.sendEmailVerification();
+    } else {
+      throw UserNotLoggedInAuthException();
     }
-    throw UserNotLoggedInAuthException();
   }
 
   @override

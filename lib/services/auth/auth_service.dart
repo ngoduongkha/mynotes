@@ -23,6 +23,7 @@ class AuthService implements AuthProvider {
 
   @override
   Future<void> logOut() => provider.logOut();
+
   @override
   Future<AuthUser> logIn({
     required String email,
